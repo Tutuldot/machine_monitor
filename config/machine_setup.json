@@ -1,0 +1,32 @@
+[
+    {
+      "name":"ACAI",
+      "root": "/acai",
+      "weekly_directory_format": ["##"],
+      "files_to_monitor":[ 
+            {
+                "type": "Image",
+                "file_extensions": ["jpg","jpeg"]
+            },
+            {
+                "type": "Text Files",
+                "file_extensions": ["txt","csv"]
+            }
+      ],
+      "file_date_format": ["XXXXXXXXXXXXXX_MMDDYYYY_XXXXXXXXXXX_XXXX.[txt,jpg]"],
+      "directory_filter": []
+    },
+    {
+        "name":"WIREBOND",
+        "root": "/wirebond",
+        "weekly_directory_format": ["##"],
+        "files_to_monitor":[ 
+              {
+                  "type": "ALL",
+                  "file_extensions": ["txt","csv","jpeg","jpg"]
+              }
+        ],
+        "file_date_format": ["XXXXXXXXXXXXXX_MMDDYYYY_XXXXXXXXXXX_XXXX.[txt,jpg]"],
+        "directory_filter": []
+      }
+]
