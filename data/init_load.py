@@ -1,18 +1,6 @@
 import sqlite3
 import machineconfig
-import hashlib
 
-
-def strToMd5(str):
-    # The string to be hashed
-    input_string = str
-    input_bytes = input_string.encode('utf-8')
-    md5_hash = hashlib.md5()
-    md5_hash.update(input_bytes)
-    hex_md5 = md5_hash.hexdigest()
-
-    print(f"The MD5 hash of '{input_string}' is: {hex_md5}")
-    return hex_md5
 
 # initialization of database
 connection = sqlite3.connect('database.db')

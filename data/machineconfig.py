@@ -1,5 +1,6 @@
 import os
 import json 
+import pandas
 
 def count_files_in_directory(directory):
     return len([name for name in os.listdir(directory) if os.path.isfile(os.path.join(directory, name))])
@@ -7,11 +8,27 @@ def count_files_in_directory(directory):
 def list_directories_and_file_counts(start_path='.'):
     for dirname, dirnames, filenames in os.walk(start_path):
         # Print the directory path
-        print(f"Directory: {dirname}")
+       
         # Count the number of files in this directory
         file_count = count_files_in_directory(dirname)
         # Print the file count
-        print(f"File Count: {file_count}")
+        print(f"Directory: {dirname} Files : {file_count}")
+
+def list_directories_and_filenames_to_dataframe(start_path='.'):
+    # Initialize an empty list to store the directory and file data
+    directory_files_data = []
+    
+    for dirname, dirnames, filenames in os.walk(start_path):
+        # For each file in the directory, append the directory path and file name
+        for filename in filenames:
+            directory_files_data.append((dirname, filename))
+    
+    # Create a DataFrame from the list of tuples
+    df = pd.DataFrame(directory_files_data, columns=['Directory', 'Filename'])
+    
+    return df
+
+
 
 def get_setup_file():
 
@@ -42,13 +59,20 @@ def unpack_config(config):
             
     return name, root, weekly_directory_format, files_to_monitor, file_date_format, directory_filter      
                 
-def sample_usage():
+def sample_usage_using_config():
 
     # list_directories_and_file_counts('/workspace/machine_monitor/sample_directory')
     configuration = get_setup_file()
-    wirebond_config = get_setup_file_by_name(configuration,"WIREBOND")
+    wirebond_config = get_setup_file_by_name(configuration,"ACAI")
 
     name, root, weekly_directory_format, files_to_monitor, file_date_format, directory_filter  = unpack_config(wirebond_config)
     # Print the information or process it as needed
-    print(f"Name: {name}")
+    for x in files_to_monitor:
+        print(x['type'])
+
+
+list_directories_and_file_counts('/workspace/machine_monitor/sample_directory/acai/17')
+    
+
+
        
