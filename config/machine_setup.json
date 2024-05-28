@@ -7,12 +7,14 @@
             {
                 "type": "Image",
                 "file_extensions": ["jpg","jpeg"],
-                "file_date_format": ["XXXXXXXXXXX_MMDDYYYY_XXXXXXXXX-X"]
+                "file_date_format": ["XXXXXXXXXXX_MMDDYYYY_XXXXXXXXX-X"],
+                "file_regex":  "^[0-9A-Z]{13}_[0-9]{8}_[0-9A-Z]{12}-[0-9]{2}\\.(jpg|png|csv|txt)$"
             },
             {
                 "type": "Text Files",
                 "file_extensions": ["txt","csv"],
-                "file_date_format": ["XXXXXXXXXXX_MMDDYYYY_XXXXXXXXX-X"]
+                "file_date_format": ["XXXXXXXXXXX_MMDDYYYY_XXXXXXXXX-X"],
+                "file_regex":  "^[0-9A-Z]{13}_[0-9]{8}_[0-9A-Z]{12}-[0-9]{2}\\.(jpg|png|csv|txt)$"
             }
       ],
       "directory_filter": []
@@ -25,7 +27,8 @@
               {
                   "type": "ALL",
                   "file_extensions": ["txt","csv","jpeg","jpg"],
-                  "file_date_format": ["XXXXXXXXXXXXXX_MMDDYYYY_XXXXXXXXXXX_XXXX"]
+                  "file_date_format": ["XXXXXXXXXXX_MMDDYYYY_XXXXXXXXX-X"],
+                  "file_regex":  "^[0-9A-Z]{13}_[0-9]{8}_[0-9A-Z]{12}-[0-9]{2}\\.(jpg|png|csv|txt)$"
               }
         ],
        
