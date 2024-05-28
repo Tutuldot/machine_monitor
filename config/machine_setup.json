@@ -6,14 +6,15 @@
       "files_to_monitor":[ 
             {
                 "type": "Image",
-                "file_extensions": ["jpg","jpeg"]
+                "file_extensions": ["jpg","jpeg"],
+                "file_date_format": ["XXXXXXXXXXX_MMDDYYYY_XXXXXXXXX-X"]
             },
             {
                 "type": "Text Files",
-                "file_extensions": ["txt","csv"]
+                "file_extensions": ["txt","csv"],
+                "file_date_format": ["XXXXXXXXXXX_MMDDYYYY_XXXXXXXXX-X"]
             }
       ],
-      "file_date_format": ["XXXXXXXXXXXXXX_MMDDYYYY_XXXXXXXXXXX_XXXX.[txt,jpg]"],
       "directory_filter": []
     },
     {
@@ -23,10 +24,11 @@
         "files_to_monitor":[ 
               {
                   "type": "ALL",
-                  "file_extensions": ["txt","csv","jpeg","jpg"]
+                  "file_extensions": ["txt","csv","jpeg","jpg"],
+                  "file_date_format": ["XXXXXXXXXXXXXX_MMDDYYYY_XXXXXXXXXXX_XXXX"]
               }
         ],
-        "file_date_format": ["XXXXXXXXXXXXXX_MMDDYYYY_XXXXXXXXXXX_XXXX.[txt,jpg]"],
+       
         "directory_filter": []
       }
 ]
